@@ -1,0 +1,14 @@
+letters = "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЄЮЯАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЄЮЯ" \
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ" \
+          "01234567890123456789" \
+          "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz" \
+          "абвгдеєжзиіїйклмнопрстуфхцчшщьюяабвгдеєжзиіїйклмнопрстуфхцчшщьюя"
+while True:
+ message = input("Word for encryption: ")
+ result = ''
+ for i in message:
+     place = letters.find(i)
+     new_place = place + 1
+     if i in letters:
+         result += letters[new_place]
+ print(result)
